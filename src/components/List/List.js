@@ -16,7 +16,7 @@ class List extends React.Component {
     title: PropTypes.node.isRequired,
     image: PropTypes.string,
     description: PropTypes.node,
-    column: PropTypes.array,
+    columns: PropTypes.array,
   }
 
   static defaultProps = {
@@ -24,20 +24,20 @@ class List extends React.Component {
   }
 
   addColumn(title){
-  this.setState(state => (
-    {
-      columns: [
-        ...state.columns,
-        {
-          key: state.columns[state.columns.length-1].key+1,
-          title,
-          icon: 'list-alt',
-          cards: []
-        }
-      ]
-    }
-  ));
-}
+    this.setState(state => (
+      {
+        columns: [
+          ...state.columns,
+          {
+            key: state.columns[state.columns.length-1].key+1,
+            title,
+            icon: 'list-alt',
+            cards: [],
+          },
+        ],
+      }
+    ));
+  }
 
   render() {
     return (
@@ -55,7 +55,7 @@ class List extends React.Component {
           <Creator text={settings.columnCreatorText} action={title => this.addColumn(title)}/>
         </div>
       </section>
-    )
+    );
   }
 }
 

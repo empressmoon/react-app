@@ -13,21 +13,23 @@ class Column extends React.Component {
 
   static propTypes = {
     title: PropTypes.string,
+    cards: PropTypes.array,
+    icon: PropTypes.string,
   }
 
   addCard(title){
-  this.setState(state => (
-    {
-      cards: [
-        ...state.cards,
-        {
-          key: state.cards[state.cards.length-1].key+1,
-          title
-        }
-      ]
-    }
-  ));
-}
+    this.setState(state => (
+      {
+        cards: [
+          ...state.cards,
+          {
+            key: state.cards[state.cards.length-1].key+1,
+            title,
+          },
+        ],
+      }
+    ));
+  }
 
   render(){
     return (
@@ -42,7 +44,7 @@ class Column extends React.Component {
           <Creator text={settings.cardCreatorText} action={title => this.addCard(title)}/>
         </div>
       </section>
-    )
+    );
   }
 }
 
