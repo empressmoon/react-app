@@ -6,8 +6,8 @@
   "scripts": {
     "start": "webpack --mode production",
     "build": "webpack --mode production",
-    "lint": "eslint src/",
-    "server": "http-server dist"
+    "lint": "eslint src/"
+
   },
   "husky": {
     "hooks": {
