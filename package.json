@@ -7,7 +7,7 @@
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
     "lint": "eslint src/",
-    "server": "http-server -o "
+    "server": "http-server src -o"
   },
   "husky": {
     "hooks": {
