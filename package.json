@@ -10,8 +10,7 @@
   "scripts": {
     "start": "http-server dist",
     "build": "webpack --mode production",
-    "lint": "eslint src/",
-    "server": "http-server dist"
+    "lint": "eslint src/"
   },
   "husky": {
     "hooks": {
