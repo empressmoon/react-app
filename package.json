@@ -5,12 +5,13 @@
   "main": "index.js",
   "engines": {
     "node": "10.15.3",
-    "npm":"6.8.0"
+    "npm": "6.8.0"
   },
   "scripts": {
-    "start": "http-server dist",
+    "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
-    "lint": "eslint src/"
+    "lint": "eslint src/",
+    "server": "http-server dist"
   },
   "husky": {
     "hooks": {
@@ -29,6 +30,8 @@
     "react-dom": "^16.7.0",
     "react-html-parser": "^2.0.2",
     "react-redux": "^7.0.1",
+    "react-router-dom": "^5.0.0",
+    "react-router-transition": "^1.3.0",
     "redux": "^4.0.1",
     "shortid": "^2.2.14"
   },
