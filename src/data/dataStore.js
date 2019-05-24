@@ -167,6 +167,11 @@ const cards = [
     columnId: 'column-3',
     title: 'Skyrim',
   },
+  {
+    id: 'card-7',
+    columnId: 'column-4',
+    title: 'Interstellar',
+  },
 ];
 
 const initialStoreData = {
