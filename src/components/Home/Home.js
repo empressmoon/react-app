@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Home.scss';
 import PropTypes from 'prop-types';
 import ListLink from '../ListLink/ListLink';
+import Container from '../Container/Container';
 
 
 class Home extends React.Component {
@@ -14,14 +15,16 @@ class Home extends React.Component {
   render() {
     const {title, subtitle, lists} = this.props;
     return (
-      <main className={styles.component}>
-        <h1 className={styles.title}>{title}</h1>
-        <h2 className={styles.subtitle}>{subtitle}</h2>
+      <Container>
+        <main className={styles.component}>
+          <h1 className={styles.title}>{title}</h1>
+          <h2 className={styles.subtitle}>{subtitle}</h2>
 
-        {lists.map(listData => (
-          <ListLink key={listData.id} {...listData} />
-        ))}
-      </main>
+          {lists.map(listData => (
+            <ListLink key={listData.id} {...listData} />
+          ))}
+        </main>
+      </Container>
     );
   }
 }

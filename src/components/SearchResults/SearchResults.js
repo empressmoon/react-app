@@ -8,7 +8,16 @@ import styles from './SearchResults.scss';
 class SearchResults extends React.Component {
   static propTypes = {
     cards: PropTypes.array,
+    changeSearchString: PropTypes.func,
     searchString: PropTypes.string,
+    match: PropTypes.object,
+    params: PropTypes.object,
+  }
+
+  componentWillMount(){
+    if(this.props.searchString == ''){
+      this.props.changeSearchString(this.props.match.params.searchString);
+    }
   }
 
   render(){
